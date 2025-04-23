@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme inline {
+    --color-mainBackgroundColor: var(--mainBackgroundColor);
+    --color-mainHoverColor: var(--mainHoverColor);
+    --color-mainButtonColor: var(--mainButtonColor);
+    --color-mainBorderColor: var(--mainBorderColor);
+    --color-mainTextColor: var(--mainTextColor);
+    --color-mainAfterColor: var(--mainAfterColor);
+    --color-mainAnchorColor: var(--mainAnchorColor);
+}
+
+[data-theme="ficto_healthtech"] {
+    --mainBackgroundColor: var(--color-emerald-950);
+    --mainHoverColor: var(--color-emerald-500);
+    --mainButtonColor: var(--color-emerald-800);
+    --mainBorderColor: var(--color-emerald-800);
+    --mainTextColor: var(--color-emerald-700);
+    --mainAfterColor: var(--color-emerald-900);
+    --mainAnchorColor: var(--color-emerald-800);
+}
+
+[data-theme="ficto_imaging"] {
+    --mainBackgroundColor: var(--color-indigo-950);
+    --mainHoverColor: var(--color-indigo-500);
+    --mainButtonColor: var(--color-indigo-800);
+    --mainBorderColor: var(--color-indigo-800);
+    --mainTextColor: var(--color-indigo-700);
+    --mainAfterColor: var(--color-indigo-900);
+    --mainAnchorColor: var(--color-indigo-800);
+}
+
+[data-theme="ficto_surgical"] {
+    --mainBackgroundColor: var(--color-rose-950);
+    --mainHoverColor: var(--color-rose-500);
+    --mainButtonColor: var(--color-rose-800);
+    --mainBorderColor: var(--color-rose-800);
+    --mainTextColor: var(--color-rose-700);
+    --mainAfterColor: var(--color-rose-900);
+    --mainAnchorColor: var(--color-rose-800);
+}
+
+@layer base {
+    html {
+        /* for better anchor link experience */
+        --scroll-behavior: smooth!important;
+        scroll-behavior: smooth!important;
+    }
+}
+
+@layer utilities {
+    .heading a {
+        @apply border-l-4 pl-7 -ml-10 font-normal scroll-m-20 no-underline;
+    }
+
+    .heading a:hover {
+        @apply border-gray-300;
+    }
+
+    .heading a.fact {
+        @apply border-none -ml-8
+    }
+    
+    h1.heading {
+        @apply text-6xl mt-10;
+    }
+
+    h2.heading {
+        @apply text-6xl;
+    }
+
+    h3.heading {
+        @apply text-3xl;
+    }
+
+    h4.heading {
+        @apply text-3xl;
+    }
+
+    h5.heading {
+        @apply text-2xl;
+    }
+
+
+    h6.heading {
+        @apply text-xl;
+    }
+}
